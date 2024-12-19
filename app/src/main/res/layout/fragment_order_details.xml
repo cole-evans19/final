@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/restaurantName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ordered From: "
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/orderTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Order Time: "
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/deliveryAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delivery Address: "
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/specialInstructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Special Instructions: "
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/orderedItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Items Ordered: "
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+    <Button
+        android:id="@+id/trackOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Track"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

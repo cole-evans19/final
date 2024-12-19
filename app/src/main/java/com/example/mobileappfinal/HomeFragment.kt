@@ -95,7 +95,7 @@ class HomeFragment : Fragment(R.layout.home_fragment), NavigationView.OnNavigati
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.nav_recent_orders -> findNavController().navigate(R.id.action_homeFragment_to_restaurantDetailFragment)
+            R.id.nav_recent_orders -> findNavController().navigate(R.id.hometorecents)
             R.id.nav_calendar -> findNavController().navigate(R.id.action_homeFragment_to_calendarViewFragment)
         }
         binding.drawerLayout.closeDrawer(GravityCompat.START)
