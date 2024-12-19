@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/signUpFragment">
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.mobileappfinal.SignUpFragment"
+        android:label="Sign Up">
+        <action
+            android:id="@+id/action_signUpFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.mobileappfinal.HomeFragment"
+        android:label="Home">
+        <!-- Action to navigate to Restaurant Detail -->
+        <action
+            android:id="@+id/action_homeFragment_to_restaurantDetailFragment"
+            app:destination="@id/restaurantDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_calendarViewFragment"
+            app:destination="@id/calendarViewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/restaurantDetailFragment"
+        android:name="com.example.mobileappfinal.RestaurantDetailFragment"
+        android:label="Restaurant Detail">
+        <argument
+            android:name="restaurantName"
+            app:argType="string" />
+        <action
+            android:id="@+id/detailToHome"
+            app:destination="@+id/homeFragment"/>
+        <action
+            android:id="@+id/detailToRecentOrders"
+            app:destination="@+id/recentOrders"/>
+        <action
+            android:id="@+id/detailToCalendar"
+            app:destination="@+id/calendarViewFragment"/>
+        <action
+            android:id="@+id/detailToCheckout"
+            app:destination="@+id/checkout"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/checkout"
+        android:name="com.example.mobileappfinal.CheckoutFragment"
+        android:label="CHeckout">
+        <action
+            android:id="@+id/checkoutToHome"
+            app:destination="@+id/homeFragment"/>
+        <action
+            android:id="@+id/checkoutToRecentOrders"
+            app:destination="@+id/recentOrders"/>
+        <action
+            android:id="@+id/checkoutToCalendar"
+            app:destination="@+id/calendarViewFragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/allRestaurantsFragment"
+        android:name="com.example.mobileappfinal.AllRestaurantsFragment"
+        android:label="All Restaurants">
+        <!-- Action to navigate to Restaurant Detail -->
+        <action
+            android:id="@+id/action_allRestaurantsFragment_to_restaurantDetailFragment"
+            app:destination="@id/restaurantDetailFragment">
+            <argument
+                android:name="restaurantName"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <!-- Favorites Fragment -->
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.mobileappfinal.FavoritesFragment"
+        android:label="Favorites">
+        <!-- Action to navigate to Restaurant Detail -->
+        <action
+            android:id="@+id/action_favoritesFragment_to_restaurantDetailFragment"
+            app:destination="@id/restaurantDetailFragment">
+            <argument
+                android:name="restaurantName"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/calendarViewFragment"
+        android:name="com.example.mobileappfinal.CalendarViewFragment"
+        android:label="Calendar View" />
+
+</navigation>
